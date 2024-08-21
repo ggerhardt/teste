@@ -1,0 +1,214 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Ranking do VET",
+        "description": "Relação do VET médio praticado pelas instituições autorizadas pelo Banco Central a operar no mercado de câmbio no mês de referência, a partir de maio de 2013. O Valor Efetivo Total (VET) representa o custo de uma operação de câmbio em reais por moeda estrangeira, englobando a taxa de câmbio, as tarifas e tributos incidentes sobre essa operação.\\n\\nDeve-se observar que os valores deste ranking referem-se a meses anteriores. As instituições não são obrigadas a praticar, no presente, os valores constantes destes registros.",
+        "contact": {
+            "email": "dadosabertossfn@bcb.gov.br"
+        },
+        "license": {
+            "name": "Open Database License (ODbL)",
+            "url": "http://opendefinition.org/licenses/odc-odbl/"
+        },
+        "version": "2.0.0"
+    },
+    "tags": [
+        {
+            "name": "Ranking",
+            "description": "Recursos para acesso ao Ranking do Vet"
+        },
+        {
+            "name": "Tabelas acessórias"
+        }
+    ],
+    "paths": {
+        "/ranking": {
+            "get": {
+                "operationId":"getRanking",
+                "tags": [
+                    "Ranking"
+                ],
+                "summary": "Ranking do VET",
+                "description": "Retorna uma relação de instituições com o VET médio praticado em operações que se enquadrem nos parâmetros informados.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/mesAnoPar",
+                        "$ref": "#/components/parameters/valorPar",
+                        "$ref": "#/components/parameters/moedaPar",
+                        "$ref": "#/components/parameters/finalidadePar",
+                        "$ref": "#/components/parameters/tipoOperacaoPar",
+                        "$ref": "#/components/parameters/formaDeEntregaPar",
+                        "$ref": "#/components/parameters/paisPar"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "schema.json#/definitions/RankingVetDef"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/dominio/finalidades": {
+            "get": {
+                "operationId":"getFinalidades",
+                "tags": [
+                    "Tabelas acessórias"
+                ],
+                "summary": "Finalidades das operações de câmbio",
+                "description": "Retorna as finalidades das operações de câmbio existentes no ranking do VET.",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "schema.json#/definitions/FinalidadesDef"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/dominio/formasDeEntrega": {
+            "get": {
+                "operationId":"getFormasDeEntrega",
+                "tags": [
+                    "Tabelas acessórias"
+                ],
+                "summary": "Finalidades das operações de câmbio",
+                "description": "Retorna as formas de entrega da moeda estrangeira existentes no ranking do VET.",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "schema.json#/definitions/FormasDeEntregaDef"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/dominio/moedas": {
+            "get": {
+                "operationId":"getMoedas",
+                "tags": [
+                    "Tabelas acessórias"
+                ],
+                "summary": "Finalidades das operações de câmbio",
+                "description": "Retorna as moedas existentes no ranking do VET.",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "schema.json#/definitions/MoedasDef"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/dominio/paises": {
+            "get": {
+                "operationId":"getPaises",
+                "tags": [
+                    "Tabelas acessórias"
+                ],
+                "summary": "Finalidades das operações de câmbio",
+                "description": "Retorna uma relação de instituições com o VET médio praticado em operações que se enquadrem nos parâmetros informados.",
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "schema.json#/definitions/PaisesDef"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "parameters": {
+            "mesAnoPar": {
+                "name": "mesAno",
+                "in": "query",
+                "description": "Mês e ano de ocorrência das operações a serem consideradas na montagem do ranking",
+                "required": true,
+                "schema": {
+                    "$ref": "schema.json#/definitions/mesAnoPar"
+                }
+            },
+            "valorPar": {
+                "name": "valor",
+                "in": "query",
+                "description": "Este valor será utilizado para determinar em que faixa de valores estarão as operações consideradas na montagem do ranking.",
+                "required": true,
+                "schema": {
+                    "$ref": "schema.json#/definitions/valorPar"
+                }
+            },
+            "moedaPar": {
+                "name": "moeda",
+                "in": "query",
+                "description": "Código da moeda das operações a serem consideradas na montagem do ranking. As moedas com respectivos códigos existentes para a formação do ranking podem ser consultadas no recurso 'Moedas'",
+                "required": true,
+                "schema": {
+                    "$ref": "schema.json#/definitions/moedaPar"
+                }
+            },
+            "finalidadePar": {
+                "name": "finalidade",
+                "in": "query",
+                "description": "Código da finalidade das operações a serem consideradas na montagem do ranking. As finalidades com respectivos códigos existentes para a formação do ranking podem ser consultadas no recurso 'Finalidades das operações de câmbio'.",
+                "required": true,
+                "schema": {
+                    "$ref": "schema.json#/definitions/finalidadePar"
+                }
+            },
+            "tipoOperacaoPar": {
+                "name": "tipoOperacao",
+                "in": "query",
+                "description": "Tipo das operações a serem consideradas na montagem do ranking.",
+                "required": true,
+                "schema": {
+                    "$ref": "schema.json#/definitions/tipoOperacaoPar"
+                }
+            },
+            "formaDeEntregaPar": {
+                "name": "formaDeEntrega",
+                "in": "query",
+                "description": "Código da forma de entrega da moeda das operações a serem consideradas na montagem do ranking. As formas de entrega com respectivos códigos existentes para a formação do ranking podem ser consultadas no recurso 'Formas de entrega da moeda estrangeira'.",
+                "required": true,
+                "schema": {
+                    "$ref": "schema.json#/definitions/formaDeEntregaPar"
+                }
+            },
+            "paisPar": {
+                "name": "pais",
+                "in": "query",
+                "description": "País de destino dos recursos das operações a serem consideradas na montagem do ranking. Os países com respectivos códigos existentes para a formação do ranking podem ser consultados no recurso 'Países de destino'",
+                "required": true,
+                "schema": {
+                    "$ref": "schema.json#/definitions/paisPar"
+                }
+            }
+        }
+    }
+}
