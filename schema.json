@@ -1,0 +1,198 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Vet",
+    "definitions": {
+        "PaisesDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "pais": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PaisDef"
+                    }
+                }
+            },
+            "required": [
+                "pais"
+            ],
+            "title": "Países"
+        },
+        "PaisDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "codigo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "codigo",
+                "descricao"
+            ],
+            "title": "País"
+        },
+        "MoedasDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "moeda": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MoedaDef"
+                    }
+                }
+            },
+            "required": [
+                "moeda"
+            ],
+            "title": "Moedas"
+        },
+        "MoedaDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "codigo": {
+                    "type": "string"
+                },
+                "descricao": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "codigo",
+                "descricao"
+            ],
+            "title": "Moeda"
+        },
+        "FormasDeEntregaDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "formaDeEntrega": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FormaDeEntregaDef"
+                    }
+                }
+            },
+            "required": [
+                "formaDeEntrega"
+            ],
+            "title": "Formas de entrega da moeda"
+        },
+        "FormaDeEntregaDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "codigo": {
+                    "type": "integer"
+                },
+                "descricao": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "codigo",
+                "descricao"
+            ],
+            "title": "Forma de entrega"
+        },
+        "FinalidadesDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "finalidade": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FinalidadeDef"
+                    }
+                }
+            },
+            "required": [
+                "finalidade"
+            ],
+            "title": "Finalidades das operações de câmbio"
+        },
+        "FinalidadeDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "codigo": {
+                    "type": "integer"
+                },
+                "descricao": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "codigo",
+                "descricao"
+            ],
+            "title": "Finalidade"
+        },
+        "RankingVetDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "rankingVet": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RankingVet"
+                    }
+                }
+            },
+            "required": [
+                "rankingVet"
+            ],
+            "title": "Ranking do Vet"
+        },
+        "RankingVet": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "codIf": {
+                    "$ref": "#/definitions/CodIf"
+                },
+                "diferenca": {
+                    "type": "integer"
+                },
+                "nomeIf": {
+                    "type": "string"
+                },
+                "numOperacoes": {
+                    "type": "integer"
+                },
+                "valorSimulado": {
+                    "type": "integer"
+                },
+                "vet": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "codIf",
+                "diferenca",
+                "nomeIf",
+                "numOperacoes",
+                "valorSimulado",
+                "vet"
+            ],
+            "title": "RankingVet"
+        },
+        "CodIf": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "CodIf"
+        }        
+    }
+}
