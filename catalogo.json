@@ -1,0 +1,667 @@
+{
+  "dataUltimaAtualizacao": "2019-12-24",
+  "cnpj": "66.666.666",
+  "nome": "Banco Homologa",
+  "contatoArea": "Banco Homologa - Open Data",
+  "contatoEmail": "cafip.dereg@bcb.gov.br",
+  "conjuntos": [
+    {
+      "ref": "https://www.bcb.gov.br/htms/dasfn/pilar3/1.2.0/openapi.json",
+      "nome": "Pilar 3 - Basiléia",
+      "urlBase": "http://www.bcnet.bcb.gov.br/dereg/dasfn/banco_homologa/pilar3",
+      "urlVisualizacao": "http://www.bcnet.bcb.gov.br/dereg/dasfn/banco_teste/catalogo/banco_homologa.json",
+      "situacao": "Homologação",
+      "recursos": [
+        {
+          "caminhoRecurso": "/km1/{trimestre}",
+          "nome": "KM1 - Informações quantitativas sobre os requerimentos prudenciais",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018",
+			  "2019"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/ova/{ano}",
+          "nome": "OVA - Visão geral do gerenciamento de riscos da instituição",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+			  "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/ov1/{trimestre}",
+          "nome": "OV1 - Visão geral dos ativos ponderados pelo risco (RWA)",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018-3",
+			  "2018-4",
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/lia/{ano}",
+          "nome": "LIA - Explicar as diferenças entre os valores contábeis tais como reportados nas demonstrações financeiras (tabela LI1) e as exposições consideradas para fins da regulamentação prudencial (tabela LI2).",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/li1/{ano}",
+          "nome": "LI1 - Diferenças entre o escopo de consolidação contábil e o escopo de tratamento prudencial, bem como o detalhamento dos valores associados às categorias de risco",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2017",
+              "2018",			  
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/li2/{ano}",
+          "nome": "LI2 - Principais causas das diferenças entre os valores considerados na regulamentação prudencial e os valores das exposições",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",              
+			  "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/pv1/{ano}",
+          "nome": "PV1 - Detalhar os elementos considerados no cálculo dos ajustes prudenciais a serem efetuados no processo de apreçamento de instrumentos financeiros avaliados pelo valor de mercado, conforme disposto na Resolução nº 4.277, de 2013.",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/cca/{semestre}",
+          "nome": "CCA - Principais características dos instrumentos que compõem o Patrimônio de Referência (PR)",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/cc1/{semestre}",
+          "nome": "CC1 - Composição do Patrimônio de Referência (PR)",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/cc2/{semestre}",
+          "nome": "CC2 - Conciliação do Patrimônio de Referência (PR) com o balanço patrimonial",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/gsib1/{ano}",
+          "nome": "GSIB1 - Indicadores utilizados para caracterização de instituição financeira como sistemicamente importante em âmbito global (G-SIBs)",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/ccyb1/{semestre}",
+          "nome": "CCYB1 - Distribuição geográfica das exposições ao risco de crédito consideradas no cálculo do ACP Contracíclico",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/lr1/{semestre}",
+          "nome": "LR1 - Comparação entre informações das demonstrações financeiras e as utilizadas para apuração da Razão de Alavancagem (RA)",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/lr2/{trimestre}",
+          "nome": "LR2 - Informações detalhadas sobre a Razão de Alavancagem",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018-2",
+              "2018-3",
+              "2018-4",
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/liqa/{ano}",
+          "nome": "LIQA - Informações qualitativas sobre o gerenciamento do risco de liquidez",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/liq1/{trimestre}",
+          "nome": "LIQ1 - Indicador de Liquidez de Curto Prazo (LCR)",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018-4",
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/liq2/{trimestre}",
+          "nome": "LIQ2 - Indicador Liquidez de Longo Prazo (NSFR)",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018-4",
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/cra/{ano}",
+          "nome": "CRA - Informações qualitativas sobre o gerenciamento do risco de crédito",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/cr1/{semestre}",
+          "nome": "CR1 - Qualidade creditícia das exposições",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-1",              
+			  "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/cr2/{semestre}",
+          "nome": "CR2 - Mudanças no estoque de operações em curso anormal",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/crb/{ano}",
+          "nome": "CRB - Informações adicionais sobre a qualidade creditícia das exposições",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/crc/{ano}",
+          "nome": "CRC - Informações sobre instrumentos mitigadores do risco de crédito",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/cr3/{semestre}",
+          "nome": "CR3 - Visão geral das técnicas de mitigação do risco de crédito",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-1",
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/cr4/{semestre}",
+          "nome": "CR4 - Abordagem padronizada – exposições e efeitos da mitigação do risco de crédito",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/cr5/{semestre}",
+          "nome": "CR5 - Abordagem padronizada - exposições por contraparte e fator de ponderação de risco (FPR)",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/ccra/{ano}",
+          "nome": "CCRA - Informações qualitativas sobre o gerenciamento do risco de crédito de contraparte (CCR)",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",              
+			  "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/ccr1/{semestre}",
+          "nome": "CCR1 - Análise das exposições ao risco de crédito de contraparte (CCR) por abordagem utilizada",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/ccr3/{semestre}",
+          "nome": "CCR3 - Abordagem padronizada – segregação de exposições ao CCR por contraparte e por fator de ponderação de risco",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-1",
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/ccr5/{semestre}",
+          "nome": "CCR5 - Colaterais financeiros associados a exposições ao risco de crédito de contraparte",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/ccr6/{semestre}",
+          "nome": "CCR6 - Informações sobre o risco de crédito de contraparte associado a derivativos de crédito",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",              
+			  "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/ccr8/{semestre}",
+          "nome": "CCR8 - Informações sobre o risco de crédito de contraparte associado a exposições a contrapartes centrais",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-1",
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/seca/{ano}",
+          "nome": "SECA - Informações qualitativas sobre o gerenciamento de riscos das exposições de securitização",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",              
+			  "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/sec1/{semestre}",
+          "nome": "SEC1 - Exposições de securitização classificadas na carteira bancária",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/sec2/{semestre}",
+          "nome": "SEC2 - Exposições de securitização classificadas na carteira de negociação",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/sec3/{semestre}",
+          "nome": "SEC3 - Exposições de securitização na carteira bancária e requerimentos de capital - instituição como originadora ou patrocinadora",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2018-2",
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/sec4/{semestre}",
+          "nome": "SEC4 - Exposições de securitização na carteira bancária e requerimentos de capital - instituição como investidora",
+          "parametros": {
+            "nome": "semestre",
+            "valores": [
+              "2019-1",
+              "2019-2"
+            ]
+          },
+          "periodicidade": "semestral"
+        },
+        {
+          "caminhoRecurso": "/mra/{ano}",
+          "nome": "MRA - Informações qualitativas sobre o gerenciamento do risco de mercado",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/mr1/{trimestre}",
+          "nome": "MR1 - Abordagem padronizada - fatores de risco associados ao risco de mercado",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018-4",
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/mrb/{ano}",
+          "nome": "MRB - Informações qualitativas sobre o risco de mercado na abordagem de modelos internos",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",              
+			  "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/mr2/{trimestre}",
+          "nome": "MR2 - Informações sobre as variações do RWA MINTmercado",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018-3",
+              "2018-4",
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/mr3/{trimestre}",
+          "nome": "MR3 - Valores dos modelos internos de risco de mercado",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/mr4/{trimestre}",
+          "nome": "MR4 - Comparação das estimativas do VaR com os resultados efetivo e hipotético",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": [
+              "2018-4",
+              "2019-1",
+              "2019-2",
+              "2019-3",
+              "2019-4"
+            ]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "caminhoRecurso": "/irrbba/{ano}",
+          "nome": "IRRBBA - Informações qualitativas sobre o gerenciamento do IRRBB",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",              
+			  "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/irrbb1/{ano}",
+          "nome": "IRRBB1 - Informações quantitativas sobre o IRRBB",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2017",
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/rema/{ano}",
+          "nome": "REMA - Política de remuneração",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/rem1/{ano}",
+          "nome": "REM1 - Remuneração atribuída durante o ano de referência",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/rem2/{ano}",
+          "nome": "REM2 - Pagamentos extraordinários",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2016",              
+			  "2017",              
+			  "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "caminhoRecurso": "/rem3/{ano}",
+          "nome": "REM3 - Remuneração diferida",
+          "parametros": {
+            "nome": "ano",
+            "valores": [
+              "2018",
+              "2019"
+            ]
+          },
+          "periodicidade": "anual"
+        }
+      ],
+      "contatoArea": "Prudential Data - Banco Homologa",
+      "contatoEmail": "prudentialdata@bancohomologa.com.br"
+    },
+	{
+      "ref": "https://www.bcb.gov.br/htms/dasfn/taxas_cartoes/1.2.0/openapi.json",
+      "nome": "Taxas de Conversão nos Cartões de Uso Internacional",
+      "urlBase": "http://www.bcnet.bcb.gov.br/dereg/dasfn/banco_homologa/taxas_cartoes",
+      "urlVisualizacao": "http://www.bcnet.bcb.gov.br/dereg/dasfn/banco_homologa/taxas_cartoes/itens/banco_homologa_cartoes.json",
+      "situacao": "Homologação",
+      "recursos": [
+        {
+          "caminhoRecurso": "/itens",
+          "nome": "Taxas de conversão aplicadas nos cartões de uso internacional",
+          "periodicidade": "diária"
+        },
+        {
+          "caminhoRecurso": "/itens/ultimo",
+          "nome": "Taxas de conversão aplicadas nos cartões de uso internacional no último dia disponível",
+          "periodicidade": "diária"
+        }
+      ],
+      "contatoArea": "International Payments - Banco Homologa",
+      "contatoEmail": "ip@bancohomologa.com.br"
+	}
+  ]
+}
